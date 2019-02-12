@@ -64,7 +64,7 @@ class BaseClient(object):
         self.cert_files = cert_files
         self.lightweight = lightweight
 
-        self.session = requests
+        self.session = requests.Session()
         self._login_time = None
         self.session_token = None
         self.identity_uri = self.IDENTITY_URLS[locale]
